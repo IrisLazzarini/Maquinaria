@@ -190,7 +190,7 @@ body {
     background:
         radial-gradient(circle at top left, rgba(102, 187, 106, 0.35), transparent 60%),
         radial-gradient(circle at bottom right, rgba(46, 125, 50, 0.7), transparent 55%),
-        url("img/PortADA.avif") center/cover no-repeat fixed;
+        url("./img/PortADA.avif") center/cover no-repeat fixed;
     position: relative;
     display: flex;
     align-items: center;
@@ -369,7 +369,7 @@ body {
 .section-image {
     background-image:
         linear-gradient(135deg, rgba(5, 11, 16, 0.9), rgba(5, 11, 16, 0.9)),
-        url("img/Cuadros De Fotos.jpg");
+        url("./img/Cuadros De Fotos.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -389,113 +389,186 @@ body {
 
 .commitment-list {
     list-style: none;
-    margin-top: 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    align-items: center;
-}
-
-.commitment-list li {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    font-size: 1.05rem;
-    color: #E5E7EB;
-}
-
-.commitment-list i {
-    color: var(--secondary-color);
-    font-size: 1.2rem;
-}
-
-/* Ubicación */
-.location-grid {
+    margin-top: 40px;
     display: grid;
-    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-    gap: 32px;
-    align-items: stretch;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.location-column {
+.commitment-item {
+    background: rgba(11, 23, 32, 0.75);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: var(--transition);
+    backdrop-filter: blur(4px);
+}
+
+.commitment-item:hover {
+    background: rgba(11, 23, 32, 0.95);
+    transform: translateY(-5px);
+    border-color: rgba(102, 187, 106, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.commitment-icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(46, 125, 50, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.commitment-item:hover .commitment-icon-box {
+    background: rgba(46, 125, 50, 0.25);
+    transform: scale(1.1);
+}
+
+.commitment-icon-box i {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+.commitment-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #E5E7EB;
+    text-align: left;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .commitment-list {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .commitment-item {
+        padding: 20px;
+    }
+}
+
+/* Contacto Unificado */
+.contact-grid-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 48px;
+    align-items: start;
+}
+
+.contact-left {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    justify-content: center;
+    height: 100%;
 }
 
-.location-item {
-    padding: 18px 18px 16px;
-    border-radius: var(--radius-md);
-    background: rgba(15, 23, 42, 0.8);
-    border: 1px solid rgba(148, 163, 184, 0.25);
-    color: #E5E7EB;
+.contact-card--unified {
+    background: radial-gradient(circle at top left, rgba(22, 163, 74, 0.15), transparent 60%), #0B1720;
+    border-radius: var(--radius-lg);
+    padding: 40px 32px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
     box-shadow: var(--shadow-soft);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
 }
 
-.location-icon {
-    font-size: 1.6rem;
-    color: var(--secondary-color);
+.contact-heading {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+.contact-desc {
+    font-size: 1.05rem;
+    color: #9CA3AF;
+    line-height: 1.6;
     margin-bottom: 8px;
 }
 
-.location-item h3 {
+/* Ubicación y Cobertura (lado derecho) */
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.location-info-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.location-item--dark {
+    background: rgba(11, 23, 32, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: var(--transition);
+}
+
+.location-item--dark:hover {
+    background: rgba(11, 23, 32, 0.9);
+    border-color: rgba(102, 187, 106, 0.3);
+}
+
+.location-item--dark h3 {
     font-family: var(--font-heading);
     font-size: 1.1rem;
-    margin-bottom: 6px;
+    color: var(--secondary-color);
+    margin-bottom: 4px;
 }
 
-.location-item p {
-    font-size: 0.98rem;
-    color: #CBD5F5;
+.location-item--dark p {
+    font-size: 0.95rem;
+    color: #D1D5DB;
+    line-height: 1.5;
 }
 
-.location-map {
+.location-item--dark .location-icon {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 4px;
+}
+
+.location-map--compact {
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
-    min-height: 260px;
+    height: 320px;
+    border: 1px solid rgba(148, 163, 184, 0.15);
 }
 
-/* Contacto */
-.contact-inner {
-    display: flex;
-    justify-content: center;
-}
-
-.contact-card {
-    max-width: 640px;
-    width: 100%;
-    margin-top: 16px;
-    padding: 28px 26px 30px;
-    border-radius: var(--radius-lg);
-    background: radial-gradient(circle at top left, rgba(22, 163, 74, 0.18), transparent 55%), #050B10;
-    border: 1px solid rgba(148, 163, 184, 0.3);
-    box-shadow: var(--shadow-soft);
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    align-items: center;
-}
-
-.contact-card--single {
-    padding-top: 34px;
-    padding-bottom: 34px;
-}
-
-.contact-row {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-
-.contact-icon {
-    font-size: 1.6rem;
-    color: #25D366;
-}
-
-.contact-text {
-    font-size: 1.02rem;
-    color: #E5E7EB;
+/* Responsive adjustments for Contact */
+@media (max-width: 992px) {
+    .contact-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .location-info-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-card--unified {
+        padding: 32px 24px;
+    }
 }
 
 /* Footer */
@@ -567,10 +640,6 @@ body {
 @media (max-width: 992px) {
     .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .location-grid {
-        grid-template-columns: minmax(0, 1fr);
     }
 
     .two-columns,
