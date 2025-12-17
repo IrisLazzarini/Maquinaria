@@ -1,177 +1,211 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PulverAgro - Servicios de pulverización agrícola profesional en San Justo, Santa Fe. Más de 20 años de experiencia.">
-    <title>PulverAgro | Pulverización Agrícola en San Justo</title>
-    
-    <!-- Google Fonts: Montserrat (Títulos) & Inter (Texto) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome para íconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Hoja de estilos -->
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulverAgro</title>
+
+    <!-- Fuentes y estilos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-
     <!-- Navegación -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">Pulver<span class="highlight">Agro</span></a>
-            <ul class="nav-menu">
-                <li><a href="#hero">Inicio</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="#hero" class="logo">Pulver<span class="highlight">Agro</span></a>
 
-    <!-- 1. Hero / Portada -->
-    <header id="hero" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content fade-in">
-            <h1>Pulverización agrícola profesional en San Justo, Santa Fe</h1>
-            <p class="subtitle">Más de 20 años de experiencia brindando servicios eficientes y confiables</p>
-            <a href="https://wa.me/5493498447060" class="btn btn-primary" target="_blank">
-                <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
-            </a>
-        </div>
+                <button class="hamburger" aria-label="Abrir menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="#hero" class="nav-link">Inicio</a></li>
+                    <li><a href="#nosotros" class="nav-link">Quiénes somos</a></li>
+                    <li><a href="#mision" class="nav-link">Misión</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#compromiso" class="nav-link">Nuestro Compromiso</a></li>
+                    <li><a href="#ubicacion" class="nav-link">Cobertura y Ubicación</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero principal -->
+        <section id="hero" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content fade-in">
+                <h1 class="hero-title">PulverAgro</h1>
+                <p class="hero-subtitle">
+                    PulverAgro es una empresa de pulverización agrícola con sede en San Justo, Santa Fe. Contamos con más de 20 años de experiencia en el rubro, garantizando servicios de alta calidad, eficiencia y cumplimiento en cada trabajo.
+                </p>
+                <a href="https://wa.me/5493498447060" class="btn btn-primary" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp: +54 9 3498 44-7060</span>
+                </a>
+            </div>
+        </section>
     </header>
 
-    <!-- 2. Quiénes Somos -->
-    <section id="nosotros" class="section">
-        <div class="container">
-            <h2 class="section-title">Quiénes Somos</h2>
-            <div class="about-content fade-in-scroll">
-                <p>
-                    <strong>PulverAgro</strong> es una empresa de pulverización agrícola con sede en San Justo, Santa Fe. 
-                    Contamos con más de 20 años de experiencia en el rubro, garantizando servicios de alta calidad, 
-                    eficiencia y cumplimiento en cada trabajo.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. Misión -->
-    <section id="mision" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Nuestra Misión</h2>
-            <div class="mission-content fade-in-scroll">
-                <p>
-                    Nuestra misión es brindar servicios de pulverización agrícola de alta calidad, 
-                    utilizando tecnología de punta y personal capacitado, contribuyendo al crecimiento 
-                    y desarrollo del sector agrícola.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Servicios -->
-    <section id="servicios" class="section">
-        <div class="container">
-            <h2 class="section-title">Nuestros Servicios</h2>
-            <div class="services-grid">
-                <!-- Servicio 1 -->
-                <div class="service-card fade-in-scroll">
-                    <div class="icon-box">
-                        <i class="fas fa-tractor"></i>
-                    </div>
-                    <h3>Pulverización terrestre</h3>
-                    <p>Aplicación precisa y eficiente para maximizar el rendimiento de sus cultivos.</p>
+    <main>
+        <!-- Quiénes somos -->
+        <section id="nosotros" class="section section-light">
+            <div class="container section-grid two-columns">
+                <div class="section-text fade-in-scroll">
+                    <h2 class="section-title">Quiénes somos</h2>
+                    <p>
+                        PulverAgro es una empresa de pulverización agrícola con sede en San Justo, Santa Fe. Contamos con más de 20 años de experiencia en el rubro, garantizando servicios de alta calidad, eficiencia y cumplimiento en cada trabajo.
+                    </p>
                 </div>
-                <!-- Servicio 2 -->
-                <div class="service-card fade-in-scroll">
-                    <div class="icon-box">
-                        <i class="fas fa-bug"></i>
-                    </div>
-                    <h3>Control de plagas</h3>
-                    <p>Manejo integral de plagas y enfermedades para proteger su inversión.</p>
-                </div>
-                <!-- Servicio 3 -->
-                <div class="service-card fade-in-scroll">
-                    <div class="icon-box">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Fertilización</h3>
-                    <p>Nutrición de cultivos con la dosis justa y en el momento adecuado.</p>
-                </div>
-                <!-- Servicio 4 -->
-                <div class="service-card fade-in-scroll">
-                    <div class="icon-box">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Asesoramiento y Reparación</h3>
-                    <p>Asesoramiento técnico y reparación de maquinaria y equipos de pulverización.</p>
+                <div class="section-media fade-in-scroll">
+                    <div class="image-card image-card--about"></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 5. Nuestro Compromiso -->
-    <section id="compromiso" class="section bg-image-overlay">
-        <div class="overlay-dark"></div>
-        <div class="container commitment-container fade-in-scroll">
-            <h2 class="section-title text-white">Nuestro Compromiso</h2>
-            <ul class="commitment-list">
-                <li><i class="fas fa-check-circle"></i> Calidad y eficiencia en todos los servicios</li>
-                <li><i class="fas fa-check-circle"></i> Personal capacitado y experimentado</li>
-                <li><i class="fas fa-check-circle"></i> Tecnología de punta y equipos modernos</li>
-                <li><i class="fas fa-check-circle"></i> Atención personalizada y seguimiento continuo</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- 6. Cobertura y Ubicación -->
-    <section id="ubicacion" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Cobertura y Ubicación</h2>
-            <div class="location-content fade-in-scroll">
-                <div class="location-item">
-                    <i class="fas fa-map-marker-alt location-icon"></i>
-                    <h3>Ubicación</h3>
-                    <p>Aeroclub de San Justo, Santa Fe</p>
+        <!-- Misión -->
+        <section id="mision" class="section section-dark">
+            <div class="container section-grid two-columns reverse">
+                <div class="section-text fade-in-scroll">
+                    <h2 class="section-title section-title-light">Misión</h2>
+                    <p class="text-light">
+                        Nuestra misión es brindar servicios de pulverización agrícola de alta calidad, utilizando tecnología de punta y personal capacitado, contribuyendo al crecimiento y desarrollo del sector agrícola.
+                    </p>
                 </div>
-                <div class="location-item">
-                    <i class="fas fa-map location-icon"></i>
-                    <h3>Cobertura</h3>
-                    <p>Santa Fe y alrededores</p>
+                <div class="section-media fade-in-scroll">
+                    <div class="image-card image-card--mission"></div>
                 </div>
             </div>
-            <p class="location-cta">Consultanos para coordinar servicios en tu zona</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- 7. Contacto / CTA Final -->
-    <section id="contacto" class="section contact-section">
-        <div class="container fade-in-scroll">
-            <h2 class="section-title">Contáctanos</h2>
-            <p class="contact-text">Estamos listos para potenciar tu campo. Escríbenos hoy mismo.</p>
-            <a href="https://wa.me/5493498447060" class="btn btn-whatsapp-large" target="_blank">
-                <i class="fab fa-whatsapp"></i> +54 9 3498 44-7060
-            </a>
-        </div>
-    </section>
+        <!-- Nuestro Compromiso -->
+        <section id="compromiso" class="section section-image">
+            <div class="section-image-overlay"></div>
+            <div class="container commitment-container fade-in-scroll">
+                <h2 class="section-title section-title-light">Nuestro Compromiso</h2>
+                <ul class="commitment-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Calidad y eficiencia en todos los servicios</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Personal capacitado y experimentado</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Tecnología de punta y equipos modernos</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Atención personalizada y seguimiento continuo</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Servicios -->
+        <section id="servicios" class="section section-light">
+            <div class="container">
+                <h2 class="section-title">Servicios</h2>
+                <div class="services-grid">
+                    <article class="service-card fade-in-scroll">
+                        <div class="icon-box">
+                            <i class="fas fa-tractor"></i>
+                        </div>
+                        <h3>Pulverización terrestre</h3>
+                    </article>
+
+                    <article class="service-card fade-in-scroll">
+                        <div class="icon-box">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h3>Control de plagas y enfermedades</h3>
+                    </article>
+
+                    <article class="service-card fade-in-scroll">
+                        <div class="icon-box">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Fertilización</h3>
+                    </article>
+
+                    <article class="service-card fade-in-scroll">
+                        <div class="icon-box">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Asesoramiento técnico y reparación de maquinaria y equipos de pulverización</h3>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cobertura y Ubicación -->
+        <section id="ubicacion" class="section section-light">
+            <div class="container">
+                <h2 class="section-title">Cobertura y Ubicación</h2>
+
+                <div class="location-grid fade-in-scroll">
+                    <div class="location-column">
+                        <div class="location-item">
+                            <i class="fas fa-map-marker-alt location-icon"></i>
+                            <h3>Ubicación</h3>
+                            <p>Ubicación: Aeroclub San Justo, RN11 Km 570, S3040 San Justo, Santa Fe</p>
+                        </div>
+                        <div class="location-item">
+                            <i class="fas fa-map location-icon"></i>
+                            <h3>Cobertura</h3>
+                            <p>Cobertura: Zona rural de San Justo y región de Santa Fe</p>
+                        </div>
+                    </div>
+                    <div class="location-column">
+                        <div class="location-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3424.3080609194723!2d-60.59000000000003!3d-30.783333000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b5e4d4f0000001%3A0x0000000000000000!2sAeroclub%20San%20Justo!5e0!3m2!1ses-419!2sar!4v1700000000000!5m2!1ses-419!2sar"
+                                width="100%"
+                                height="100%"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="section section-dark">
+            <div class="container fade-in-scroll contact-inner">
+                <h2 class="section-title section-title-light">Contacto</h2>
+                <div class="contact-card contact-card--single">
+                    <a href="https://wa.me/5493498447060" class="btn btn-whatsapp-large" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp: +54 9 3498 44-7060</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="site-footer">
         <div class="container footer-content">
-            <p>&copy; 2025 PulverAgro. Todos los derechos reservados.</p>
+            <span>PulverAgro</span>
         </div>
     </footer>
 
-    <!-- Botón Flotante WhatsApp -->
-    <a href="https://wa.me/5493498447060" class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://wa.me/5493498447060" class="whatsapp-float" target="_blank" rel="noopener" title="WhatsApp: +54 9 3498 44-7060">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -186,30 +220,28 @@
             navMenu.classList.toggle("active");
         });
 
-        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-            hamburger.classList.remove("active");
-            navMenu.classList.remove("active");
-        }));
-
-        // Animación al hacer scroll
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
+        document.querySelectorAll(".nav-link").forEach((link) => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in-scroll').forEach((el) => {
-            observer.observe(el);
         });
+
+        // Animaciones al hacer scroll
+        const observer = new IntersectionObserver(
+            (entries, obs) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        obs.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.15 }
+        );
+
+        document.querySelectorAll(".fade-in-scroll").forEach((el) => observer.observe(el));
     </script>
 </body>
 </html>
+
